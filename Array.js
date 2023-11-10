@@ -24,7 +24,7 @@ const ArrayJS = {
 
     ["Swap"]: function(Array, index01, index02){
         const temp = Array[index01];
-        Array[index1] = Array[index02];
+        Array[index01] = Array[index02];
         Array[index02] = temp;
 
         return Array;
