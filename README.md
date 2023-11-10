@@ -1,4 +1,7 @@
 # ArrayJS
+
+![](logos/ArrayJS_logo_512x512.png)
+
 An module made for extending the capabilities of arrays in javascript
 
 # Usage:
