@@ -41,6 +41,13 @@ console.log(ArrayJS.Swap(array,0,3)); // Swaps index of two items in an array.
 
 ```
 
+**GenerateArray**
+
+```javascript
+console.log(ArrayJS.GenerateArray(5)) // Swaps index of two items in an array. // Generates an array as of which the items count from 1 to the respective length of the array.
+
 ```
-Output: [4,2,3,1]
+
+```
+Output: [1,2,3,4,5]
 ```
