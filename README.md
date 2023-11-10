@@ -54,3 +54,9 @@ console.log(ArrayJS.GenerateArray(5)) // Generates an array as of which the item
 ```
 Output: [1,2,3,4,5]
 ```
+
+# Sorting Algorithms
+
+They all achieve they same thing of sorting the array but they are using different techniques\
+More info: https://en.wikipedia.org/wiki/Sorting_algorithm
+
