@@ -24,7 +24,7 @@ Output: Passed!
 ```javascript
 const array = [1,2,3,4];
 
-console.log(ArrayJS.Shuffle(array)); // Radomizes the array.
+console.log(ArrayJS.Shuffle(array)); // Randomizes the array.
 
 ```
 
