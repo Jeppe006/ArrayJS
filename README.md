@@ -40,6 +40,9 @@ const array = [1,2,3,4];
 console.log(ArrayJS.Swap(array,0,3)); // Swaps index of two items in an array.
 
 ```
+```
+Output: [4,2,3,1]
+```
 
 **GenerateArray**
 
