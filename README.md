@@ -62,7 +62,7 @@ Output: [1,2,3,4,5]
 const array = [1,[ 2,3, ["secret", 4] ],5 ]
 
 console.log(ArrayJS.DeepSearch(array,"secret"));
-// Searches both the array and nested arrays.
+// Searches both the array and any nested arrays.
 // If it finds nothing it will return undefined.
 ```
 ```
@@ -79,6 +79,17 @@ console.log(ArrayJS.Equalize(array));
 ```
 ```
 Output: 1
+```
+
+**Split**
+
+```javascript
+const array = [1,2,3,4,5,6];
+console.log(ArrayJS.Split(array,2)); 
+// Splits the array in n interger amount of chunks
+```
+```
+Output: [ [1,2,3], [4,5,6] ]
 ```
 
 # Sorting Algorithms
