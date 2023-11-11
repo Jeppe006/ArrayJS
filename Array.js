@@ -110,7 +110,7 @@ const ArrayJS = {
         };
 
         Remove(Row, Column){
-            this.array[Row].splice(Column,1);
+            this.array[Row][Column] = 0
         };
     },
 
