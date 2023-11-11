@@ -6,7 +6,7 @@ A library for array manipulation in JavaScript. This library is designed to make
 
 # Usage:
 
-**Compare**
+**MultiArray**
 
 ```javascript
 const multiArray = new ArrayJS.MultiArray(3,3)
