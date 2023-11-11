@@ -11,13 +11,12 @@ An module made for extending the capabilities of arrays in javascript
 ```javascript
 const array1 = [1,2,3,4];
 const array2 = [1,2,3,4];
-// ArrayJS.Compare() compares two arrays and returns boolean.
+// Compares two arrays and if the arrays are equally long with the same items it will return true.
 if(ArrayJS.Compare(array1,array2)){
   console.log("Passed!");
 }
 
 ```
-
 ```
 Output: Passed!
 ```
@@ -30,7 +29,6 @@ const array = [1,2,3,4];
 console.log(ArrayJS.Shuffle(array)); // Randomizes the array.
 
 ```
-
 ```
 Output: [3,2,4,1]
 ```
@@ -50,12 +48,37 @@ Output: [4,2,3,1]
 **GenerateArray**
 
 ```javascript
-console.log(ArrayJS.GenerateArray(5)) // Generates an array as of which the items count from 1 to the respective length of the array.
+// Generates an array as of which the items count from 1 to the respective length of the array.
+console.log(ArrayJS.GenerateArray(5));
 
 ```
-
 ```
 Output: [1,2,3,4,5]
+```
+
+**DeepSearch**
+
+```javascript
+const array = [1,[ 2,3, ["secret", 4] ],5 ]
+
+console.log(ArrayJS.DeepSearch(array,"secret"));
+// Searches both the array and nested arrays.
+// If it finds nothing it will return undefined.
+```
+```
+Output: {0: "secret", length: 1}
+```
+
+**Equalize**
+
+```javascript
+const array = [1,2,2,3];
+console.log(ArrayJS.Equalize(array));
+// Counts all of the interger items to an minimum number.
+// If not possible it will return null.
+```
+```
+Output: 1
 ```
 
 # Sorting Algorithms
