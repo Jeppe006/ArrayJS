@@ -33,7 +33,7 @@ const ArrayJS = {
     ["GenerateArray"]: function(Length){
         const Array = [];
 
-        for(let i = 0; i < Length; i++){
+        for(let i = 0; i < Math.abs(Length+1); i++){
             Array.push(i);
         };
 
@@ -71,6 +71,19 @@ const ArrayJS = {
             };
         };
         return undefined;
+    },
+
+    ["Split"]: function(Array,Amount){
+        const result = [];
+        const chunkSize = Math.ceil(Array.length / Amount);
+        for (let i = 0; i < Array.length; i += chunkSize) {
+            let end = i + chunkSize;
+            if (end > Array.length) {
+              end = Array.length;
+            }
+            result.push(Array.slice(i, end));
+          }
+          return result;
     },
 
     ["Sort"]: {
@@ -122,8 +135,28 @@ const ArrayJS = {
                 }
             }
             return Array;
+        },
+
+        ["OddEvenSort"]: function(Array){
+            let sorted = false;
+            while (!sorted) {
+              sorted = true;
+              for (let i = 1; i < Array.length - 1; i += 2) {
+                if (Array[i] > Array[i + 1]) {
+                  [Array[i], Array[i + 1]] = [Array[i + 1], Array[i]];
+                  sorted = false;
+                }
+              }
+              for (let i = 0; i < Array.length - 1; i += 2) {
+                if (Array[i] > Array[i + 1]) {
+                  [Array[i], Array[i + 1]] = [Array[i + 1], Array[i]];
+                  sorted = false;
+                }
+              }
+            }
+            return Array;
         }
-    }
+    },
     
 };
 
