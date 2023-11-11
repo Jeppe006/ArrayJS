@@ -86,6 +86,34 @@ const ArrayJS = {
           return result;
     },
 
+    ["MultiArray"]: class{
+        array;
+        Rows;
+        Column;
+
+        constructor(Rows, Columns){
+            this.Rows = Rows;
+            this.Columns = Columns;
+
+            let array = [];
+            for(let i = 0; i < Rows; i++){
+                array[i] = [];
+                for(let j = 0; j < Columns; j++){
+                    array[i][j] = 0;
+                };
+            };
+            this.array = array;
+        };
+
+        Add(Row, Column, Value){
+            this.array[Row][Column] = Value;
+        };
+
+        Remove(Row, Column){
+            this.array[Row].splice(Column,1);
+        };
+    },
+
     ["Sort"]: {
         ["BlockSort"]: function(Array){
             let blocks = [];
