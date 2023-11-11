@@ -2,7 +2,7 @@
 
 ![](logos/ArrayJS_logo_512x512.png)
 
-An module made for extending the capabilities of arrays in javascript
+A library for array manipulation in JavaScript. This library is designed to make working with arrays a breeze, offering a set of easy-to-use functions
 
 # Usage:
 
