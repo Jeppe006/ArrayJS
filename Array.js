@@ -1,10 +1,10 @@
 const ArrayJS = {
-    ["Compare"]: function(Array1, Array2){
-        for (let i = 0; i < Array1.length; i++) {
-            const element01 = Array1[i];
-            const element02 = Array2[i];
+    ["Compare"]: function(Array01, Array02){
+        for (let i = 0; i < Array01.length; i++) {
+            const element01 = Array01[i];
+            const element02 = Array02[i];
             
-            if(Array2.length > Array1.length || element01 != element02 || i > element02.length){
+            if(Array02.length > Array01.length || element01 != element02 || i > element02.length){
                 return false;
             };
         };
@@ -38,6 +38,39 @@ const ArrayJS = {
         };
 
         return Array;
+    },
+
+    ["Equalize"]: function(Array){
+        let summary = 0;
+        let different_summary = 0;
+
+        for(let i = 0; i < Array.length; i++){
+            summary += Array[i];
+        }
+
+        if(summary % Array.length != 0){
+            return null;
+        }
+
+        const equalize = parseInt(summary / Array.length, 10);
+
+        for(let i = 0; i < Array.length; i++){
+            different_summary += Math.abs(Array[i] - equalize);
+        };
+
+        return parseInt(different_summary / 2, 10)
+    },
+
+    ["DeepSearch"]: function(Search,Item){
+        for(let i = 0; i < Search.length; i++){
+            if(Search[i] == Item){
+                return Search[i];
+            }else if(Array.isArray(Search[i])){
+                const result = ArrayJS.DeepSearch(Search[i],Item)
+                if(result != undefined){ return result };
+            };
+        };
+        return undefined;
     },
 
     ["Sort"]: {
@@ -91,7 +124,6 @@ const ArrayJS = {
             return Array;
         }
     }
-
     
 };
 
