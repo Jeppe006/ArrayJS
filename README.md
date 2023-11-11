@@ -9,6 +9,30 @@ A library for array manipulation in JavaScript. This library is designed to make
 **Compare**
 
 ```javascript
+const multiArray = new ArrayJS.MultiArray(3,3)
+// Creates an new dimensional array that is 3x3
+// [0,0,0]
+// [0,0,0]
+// [0,0,0]
+
+multiArray.Add(0,0,1) // adds 1 on row 0 & column 0
+multiArray.Add(1,1,2) // adds 2 on row 1 & column 1
+multiArray.Add(2,2,3) // adds 3 on row 2 & column 2
+
+// To remove from the use built in remove function
+// but it is the same as doing Add(Row,Column,0).
+// To get the array itself use multiArray.array
+console.log(multiArray.array)
+```
+```
+Output: [1,0,0]
+        [0,2,0]
+        [0,0,3]
+```
+
+**Compare**
+
+```javascript
 const array1 = [1,2,3,4];
 const array2 = [1,2,3,4];
 // Compares two arrays and if the arrays are equally long with the same items it will return true.
