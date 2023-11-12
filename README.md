@@ -17,8 +17,8 @@ In an HTML document you get a script tag and link it to the library and it will 
 **MultiArray**
 
 ```javascript
-const multiArray = new ArrayJS.MultiArray(3,3);
-// Creates an new dimensional array that is 3x3
+const multiArray = new ArrayJS.MultiArray(3,3,0);
+// Creates an new dimensional array that is 3x3 and sets the empty items as 0
 // [0,0,0]
 // [0,0,0]
 // [0,0,0]
@@ -27,8 +27,7 @@ multiArray.Add(0,0,1); // adds 1 on row 0 & column 0
 multiArray.Add(1,1,2); // adds 2 on row 1 & column 1
 multiArray.Add(2,2,3); // adds 3 on row 2 & column 2
 
-// To remove from the use built in remove function
-// but it is the same as doing Add(Row,Column,0).
+// To remove from the use Remove(Row, Column) function, it will set it as the default value
 // To get the array itself use multiArray.array
 console.log(multiArray.array);
 ```
