@@ -33,7 +33,7 @@ const ArrayJS = {
     ["GenerateArray"]: function(Length){
         const Array = [];
 
-        for(let i = 0; i < Math.abs(Length+1); i++){
+        for(let i = 1; i < Math.abs(Length+1); i++){
             Array.push(i);
         };
 
@@ -86,6 +86,81 @@ const ArrayJS = {
           return result;
     },
 
+    ["FindRepeat"]: function(Array){
+        for(let i = 0; i < Array.length; i++){
+            for(let j = 0; j < Array.length; j++){
+                if(Array[i] == Array[j]){
+                    return i;
+                };
+            };
+        };
+
+        return undefined;
+    },
+
+    ["Max"]: function(Array, Max){
+        for(let i = 0; i < Array.length; i++){
+            if(Array[i] > Max){
+                Array[i] = Max;
+            }
+        };
+
+        return Array;
+    },
+
+    ["Min"]: function(Array, Min){
+        for(let i = 0; i < Array.length; i++){
+            if(Array[i] < Min){
+                Array[i] = Min;
+            }
+        };
+
+        return Array;
+    },
+
+    ["Clamp"]: function(Array, Max, Min){
+        for(let i = 0; i < Array.length; i++){
+            if(Array[i] > Min){
+                Array[i] = Min;
+            }else if(Array[i] < Max){
+                Array[i] = Max;
+            };
+        };
+
+        return Array;
+    },
+
+    ["Unique"]: function(Array){
+        for(let i = 0; i < Array.length; i++){
+            for(let j = 0; j < Array.length; j++){
+                if(Array[i] == Array[j]){
+                    Array.splice(i,1);
+                };
+            };
+        };
+
+        return Array
+    },
+
+    ["Last"]: function(Array, Count){
+        if(Array.length < Array.length - Count || Count < 0){return Array};
+        return Array.slice(Array.length - Count,Array.length);
+    },
+
+//    ["Rotate"]: function(Array, Rotation){
+//        if(Rotation < 0){
+//            for(let i = 0; i < Rotation; i++){
+//                Array = Array.unshift(Array.pop());
+//            }
+//        }else if(Rotation > 0){
+//            for(let i = 0; i < Rotation; i--){
+//                Array = Array.push(Array.shift());
+//            }
+//        }
+//
+//        return Array;
+//    },
+    
     ["MultiArray"]: class{
         array;
         Rows;
@@ -189,4 +264,3 @@ const ArrayJS = {
     },
     
 };
-
