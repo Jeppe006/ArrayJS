@@ -90,16 +90,18 @@ const ArrayJS = {
         array;
         Rows;
         Column;
+        Default;
 
-        constructor(Rows, Columns){
+        constructor(Rows, Columns, Default){
             this.Rows = Rows;
             this.Columns = Columns;
+            this.Default = Default
 
             let array = [];
             for(let i = 0; i < Rows; i++){
                 array[i] = [];
                 for(let j = 0; j < Columns; j++){
-                    array[i][j] = 0;
+                    array[i][j] = Default;
                 };
             };
             this.array = array;
@@ -110,7 +112,7 @@ const ArrayJS = {
         };
 
         Remove(Row, Column){
-            this.array[Row][Column] = 0
+            this.array[Row][Column] = this.Default
         };
     },
 
