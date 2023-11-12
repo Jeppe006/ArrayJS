@@ -133,6 +133,61 @@ console.log(ArrayJS.FindRepeat(array));
 ```
 Output: 2
 ```
+\
+**Max**
+
+```javascript
+const array = [1,2,3,4,5];
+console.log(ArrayJS.Max(array,3)); 
+// Sets an max cap on the array anything above the max cap will be set to the max value.
+```
+```
+Output: [1,2,3,3,3]
+```
+\
+**Min**
+
+```javascript
+const array = [1,2,3,4,5];
+console.log(ArrayJS.Min(array,3)); 
+// Sets an minimum cap on the array anything below the minimum cap will be set to the minimum value.
+```
+```
+Output: [3,3,3,4,5]
+```
+\
+**Clamp**
+
+```javascript
+const array = [1,2,3,4,5,6,7,8,9,10];
+console.log(ArrayJS.Clamp(array,3,7)); 
+// Clamp is both Max & Min together.
+```
+```
+Output: [3,3,3,4,5,6,7,7,7,7]
+```
+\
+**Unique**
+
+```javascript
+const array = [1,1,2,2,3,3];
+console.log(ArrayJS.Unique(array)); 
+// Removes any repeating items.
+```
+```
+Output: [1,2,3]
+```
+\
+**Last**
+
+```javascript
+const array = [1,2,3,4];
+console.log(ArrayJS.Last(array,2)); 
+// Gets the last part of the array respective of the amount.
+```
+```
+Output: [3,4]
+```
 
 
 
