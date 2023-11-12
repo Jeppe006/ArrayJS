@@ -1,10 +1,18 @@
-# ArrayJS
+<p align="center">
+        <img src="./logos/ArrayJS_logo_512x512.png">
+</p>
 
-![](logos/ArrayJS_logo_512x512.png)
+ <h1 align="center">ArrayJS</h1>
 
 A library for array manipulation in JavaScript. This library is designed to make working with arrays a breeze, offering a set of easy-to-use functions
 
-# Usage:
+**Installation**\
+In an HTML document you get a script tag and link it to the library and it will automatically work for other of your scripts.
+```HTML
+<script src="your/path/to/Array.js"></script>
+```
+
+# Usage
 
 **MultiArray**
 
@@ -29,7 +37,7 @@ Output: [1,0,0]
         [0,2,0]
         [0,0,3]
 ```
-
+\
 **Compare**
 
 ```javascript
@@ -44,7 +52,7 @@ if(ArrayJS.Compare(array1,array2)){
 ```
 Output: Passed!
 ```
-
+\
 **Shuffle**
 
 ```javascript
@@ -56,7 +64,7 @@ console.log(ArrayJS.Shuffle(array)); // Randomizes the array.
 ```
 Output: [3,2,4,1]
 ```
-
+\
 **Swap**
 
 ```javascript
@@ -68,7 +76,7 @@ console.log(ArrayJS.Swap(array,0,3)); // Swaps index of two items in an array.
 ```
 Output: [4,2,3,1]
 ```
-
+\
 **GenerateArray**
 
 ```javascript
@@ -79,7 +87,7 @@ console.log(ArrayJS.GenerateArray(5));
 ```
 Output: [1,2,3,4,5]
 ```
-
+\
 **DeepSearch**
 
 ```javascript
@@ -92,7 +100,7 @@ console.log(ArrayJS.DeepSearch(array,"secret"));
 ```
 Output: {0: "secret", length: 1}
 ```
-
+\
 **Equalize**
 
 ```javascript
@@ -104,7 +112,7 @@ console.log(ArrayJS.Equalize(array));
 ```
 Output: 1
 ```
-
+\
 **Split**
 
 ```javascript
