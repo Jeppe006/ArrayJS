@@ -88,10 +88,8 @@ const ArrayJS = {
 
     ["FindRepeat"]: function(Array){
         for(let i = 0; i < Array.length; i++){
-            for(let j = 0; j < Array.length; j++){
-                if(Array[i] == Array[j]){
-                    return i;
-                };
+            if(Array[i] == Array[i+1]){
+                return i;
             };
         };
 
