@@ -117,11 +117,24 @@ Output: 1
 ```javascript
 const array = [1,2,3,4,5,6];
 console.log(ArrayJS.Split(array,2)); 
-// Splits the array in n interger amount of chunks
+// Splits the array in n interger amount of chunks.
 ```
 ```
 Output: [ [1,2,3], [4,5,6] ]
 ```
+\
+**FindRepeat**
+
+```javascript
+const array = [1,2,3,3];
+console.log(ArrayJS.FindRepeat(array)); 
+// Finds the first repeating item in the array and returns their index.
+```
+```
+Output: 2
+```
+
+
 
 # Sorting Algorithms
 
